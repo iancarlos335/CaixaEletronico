@@ -41,21 +41,28 @@ public class Correntista {
     public void sacar(double valorSaque) {
         if (this.saldo >= this.valorSaque) {
             this.saldo = saldo - valorSaque;
+            System.out.println("O saque deu certo!");
+            System.out.println("O valor do saque foi de: " + getValorSaque());
         } else {
-            System.out.println("Você não tem saldo suficiente");
+            System.out.println("Você não tem saldo suficiente.");
+            System.out.println("O valor do saque foi de: 0.0");
         }
     }
 
     public void depositar(double valorDeposito) {
         if (this.saldo >= this.valorDeposito) {
             this.saldo = saldo + valorDeposito;
+            System.out.println("O depósito deu certo!");
+            System.out.println("O valor do depósito foi de: " + getValorDeposito());
         } else {
-            System.out.println("Você não tem saldo suficiente");
+            System.out.println("Você não tem saldo suficiente.");
+            System.out.println("O valor do depósito foi de: 0.0");
         }
     }
 
     public void calcularRendimento(double saldo) { // Que no caso é de 10% sobre o saldo
         this.saldo = saldo * 1.1;
+        System.out.println("O rendimento deu certo!");
     }
 
 }

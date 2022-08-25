@@ -4,8 +4,7 @@
 @since   22/08/2022
 */
 
-package com.caixa.economica
-;
+package com.caixa.economica;
 
 import java.util.Scanner;
 
@@ -55,23 +54,29 @@ public class Conta {
             controleMetodos = metodos;
 
             if (controleMetodos.equals("S")) {
-                System.out.println("Insira o valor do saque: ");
-                movimentacao.setValorSaque(scanner.nextDouble());
-                movimentacao.sacar(movimentacao.getValorSaque());
-                System.out.println("O valor do saque foi de: " + movimentacao.getValorSaque());
-                System.out.println("Seu saldo atual é de: " + movimentacao.getSaldo());
-                System.out.println("O saque deu certo \n");
+                System.out.println("\nInsira o valor do saque: ");
+                movimentacao.setValorSaque(scanner.nextDouble()); // Define um valor de saque, pelo que for digitado
+                                                                  // pelo Usuário
+
+                movimentacao.sacar(movimentacao.getValorSaque()); // Realiza o saque com o valor definido pelo usuário
+                                                                  // anteriormente
+
+                System.out.println("Seu saldo atual é de: " + movimentacao.getSaldo() + "\n");
+
             } else if (controleMetodos.equals("D")) {
-                System.out.println("Insira o valor do depósito: ");
-                movimentacao.setValorDeposito(scanner.nextDouble());
-                movimentacao.depositar(movimentacao.getValorDeposito());
-                System.out.println("O valor do depósito foi de: " + movimentacao.getValorDeposito());
-                System.out.println("Seu saldo atual é de: " + movimentacao.getSaldo());
-                System.out.println("O depósito deu certo \n");
+                System.out.println("\nInsira o valor do depósito a receberI: ");
+                movimentacao.setValorDeposito(scanner.nextDouble()); // Define um valor de saque, pelo que for digitado
+                                                                     // pelo Usuário
+
+                movimentacao.depositar(movimentacao.getValorDeposito()); // Realiza o saque com o valor definido pelo
+                                                                         // usuário anteriormente
+
+                System.out.println("Seu saldo atual é de: " + movimentacao.getSaldo() + "\n");
+
             } else if (controleMetodos.equals("R")) {
                 movimentacao.calcularRendimento(movimentacao.getSaldo());
-                System.out.println("O seu rendimento aumentou o saldo para: " + movimentacao.getSaldo());
-                System.out.println("O rendimento deu certo \n");
+                System.out.println("\nO seu rendimento aumentou o saldo para: " + movimentacao.getSaldo() + "\n");
+
             } else {
                 System.out.println("Coloque o número certo \n");
             }
