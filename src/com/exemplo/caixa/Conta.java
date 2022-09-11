@@ -4,7 +4,7 @@
 @since   22/08/2022
 */
 
-package com.caixa.economica;
+package com.exemplo.caixa;
 
 import java.util.Scanner;
 
